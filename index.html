@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vuejs</title>
+</head>
+<body>
+<div id="app">
+    <h1>{{message}}</h1>
+    <p>{{ changeTitle()}}</p>
+    <button @click="Change">Click me</button>
+    <br>
+    <span>{{count}}</span>
+    <input type="text" v-on:input="changeTitle">
+    <p v-on:mousemove="ChangeCordination">Cordinata: {{x}}/{{y}}</p>
+    <a :href="title">Google</a>
+    <ul>
+        <li v-for="teache in teaches">{{teache}}</li>
+    </ul>
+</div>
+<div id="app1">
+    <h1 style="text-align: center; color: red;">{{title}}</h1>
+    <p v-if="seen">{{changetitle()}}</p>
+    <h6 v-if="seen">{{count}}</h6>
+    <button @click="Incriment()">Click me</button>
+    <p>{{count}}</p>
+    <button @click="Showtitle()">O'zgartir</button>
+    <button @click="ChangeApp2()">Change</button>
+</div>
+<div id="app2">
+    <input type="text" v-model:value="message">
+    <p>{{message}}</p>
+</div>
+<div id="app3">
+    <input type="text" v-model="title" @keyup.enter="Savetitle">
+    <button @click="Savetitle">Save boys</button>
+    <ul>
+        <li v-for="boy in boys">{{boy}}</li>
+    </ul>
+    
+</div>
+<div id="app4">
+   <product></product>
+</div>
+<div id="app5">
+    <div class="demo":style="[myStyle, {height:width+'px'}]"></div>
+    <div class="demo" ></div>
+    <div class="demo" ></div>
+    <h1 :style="{fontSize:fontSize}">dddddddddddd</h1>
+    <br>
+    <input type="text" v-model="color">
+    <input type="text" v-model="width">
+</div>
+<div id="demo">{{ firstName }}
+</div>
+<div id="app6">
+    
+    <form action="">
+        <input type="text" v-model="name">
+        <br>
+        <input v-if="isNameEntered" type="text" v-model="email">
+        <br>
+        <input v-if="" type="password" v-model="parol">
+        <br>
+        <input v-if="" type="text" v-model="login" >
+        <br>
+        <button @click.prevent="Bosh"></button>
+    </form>
+    <input type="radio" id="one" value="One" v-model="picked">
+<label for="one">One</label>
+<br>
+<input type="radio" id="two" value="Two" v-model="picked">
+<label for="two">Two</label>
+<br>
+<span>Picked: {{ picked }}</span>
+</div>
+<div id="app7">
+    <my-form></my-form>
+</div>
+<div id="app8">
+    <my-form></my-form>
+</div>
+<script src="vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
